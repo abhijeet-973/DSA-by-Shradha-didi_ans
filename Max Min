@@ -1,0 +1,25 @@
+class Solution
+{
+   public:
+    int findSum(int A[], int N)
+    {
+    	//code here.
+    	int res=0;
+    	int max=0;
+    	for(int i =1;i<N;i++)
+    	{
+    	    if(A[i]>A[res])
+    	    {
+    	        res=i;
+    	    }
+    	    if(A[i]<A[max])
+    	    {
+    	        max=i;
+    	    }
+    	}
+    	
+    	return A[max]+A[res];
+    	
+    }
+
+};
